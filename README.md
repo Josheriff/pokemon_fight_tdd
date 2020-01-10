@@ -7,7 +7,7 @@ Recibe 2 nombres, que serán los entrenadores pokemon.
 
 ## Como lo hace
 
- - Recibe los 2 nombres y los pone con la primera letra en mayuscula y el resto en minuscula, no admite espacios.
+ - Recibe los 2 nombres mediante api y los pone con la primera letra en mayuscula y el resto en minuscula, no admite espacios.
  - Hace una llamada a https://pokeapi.co/api/v2/pokemon/  y coge el valor `count` para saber el número máximo
  de pokemons actualmente.
  - Hace 2 llamadas a https://pokeapi.co/api/v2/{{numero-random-entre-1-y-maximoDePokemons}}

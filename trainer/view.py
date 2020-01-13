@@ -9,6 +9,8 @@ class TrainerReciver(Resource):
     
     def capitalize(self, data):
         # return [{"name":"Aname"}, {"name": "Anothername"}]
+        if len(data) == 0:
+            raise IndexError
         for name in data:
             name['name'] = name['name'].capitalize()
         

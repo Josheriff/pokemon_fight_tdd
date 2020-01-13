@@ -2,7 +2,7 @@ import unittest
 import pytest
 from ..view import TrainerReciver
 
-class testTrainerView(unittest.TestCase):
+class TestTrainerView(unittest.TestCase):
     def test_name_capitalize(self):
         trainer = TrainerReciver()
         fake_data = [{"name":"aname"}, {"name": "anothername"}]

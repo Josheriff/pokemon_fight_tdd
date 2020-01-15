@@ -3,6 +3,10 @@ import pytest
 from ..view import TrainerReciver
 
 class TestTrainerView(unittest.TestCase):
+    def setUp(self):
+        print('ME EJECUTO')
+        self.desk = [1,2,3,4,5,6]
+
     def test_name_capitalize(self):
         trainer = TrainerReciver()
         fake_data = [{"name":"aname"}, {"name": "anothername"}]
@@ -60,4 +64,15 @@ class TestTrainerView(unittest.TestCase):
 
         with pytest.raises(IndexError):
             assert trainer.capitalize([]) # SUT (SUBJECT UNDER TEST)
-       
+
+    def test_the_desk_one_less(self):
+       self.desk.remove(1)
+
+       assert self.desk.count(1) == 0
+       assert len(self.desk) == 5
+    
+    def test_the_desk_number_to_delete(self):
+        self.desk.remove(2)
+
+        assert self.desk.count(2) == 0
+        assert len(self.desk) == 5
